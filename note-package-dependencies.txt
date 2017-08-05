@@ -1,0 +1,30 @@
+1.依赖图
+[INFO] com.hadly:hadly-project-practise:jar:1.0-SNAPSHOT
+[INFO] +- com.alibaba:dubbo:jar:2.5.3:compile
+[INFO] |  +- org.javassist:javassist:jar:3.15.0-GA:compile
+[INFO] |  \- org.jboss.netty:netty:jar:3.2.5.Final:compile
+[INFO] +- org.springframework:spring-beans:jar:4.2.5.RELEASE:compile
+[INFO] +- org.springframework:spring-core:jar:4.2.5.RELEASE:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.2:compile
+[INFO] +- org.springframework:spring-context:jar:4.2.5.RELEASE:compile
+[INFO] |  \- org.springframework:spring-aop:jar:4.2.5.RELEASE:compile
+[INFO] |     \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] \- org.springframework:spring-expression:jar:4.2.5.RELEASE:compile
+
+2.依赖包说明
+--Dubbo默认依赖了netty，用于RPC通信
+--spring默认依赖了aopalliance
+  这个包是AOP联盟的API包，里面包含了针对面向切面的接口。通常Spring等其它具备动态织入功能的框架依赖此包
+--
+
+
+
+
+
+
+
+
+
+
+
+
