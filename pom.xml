@@ -12,6 +12,7 @@
         <dubbo.version>2.5.3</dubbo.version>
         <spring.version>4.2.5.RELEASE</spring.version>
         <fastjson.version>1.2.29</fastjson.version>
+        <zookeeper.version>0.10</zookeeper.version>
     </properties>
 
     <dependencies>
@@ -93,6 +94,26 @@
             <!--<artifactId>fastjson</artifactId>-->
             <!--<version>${fastjson.version}</version>-->
         <!--</dependency>-->
+
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>${zookeeper.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <!--<exclusion>-->
+                    <!--<groupId>org.slf4j</groupId>-->
+                    <!--<artifactId>slf4j-api</artifactId>-->
+                <!--</exclusion>-->
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 
 </project>

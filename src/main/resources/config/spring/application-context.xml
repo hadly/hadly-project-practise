@@ -5,7 +5,7 @@
             http://www.springframework.org/schema/beans/spring-beans-4.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <!-- 包导入 -->
     <import resource="classpath:config/spring/dubbo-provider.xml" />
-    <!--<import resource="classpath:config/spring/dubbo-consumer.xml" />-->
+    <import resource="classpath:config/spring/dubbo-consumer.xml" />
 
     <!-- 注解扫描 -->
     <context:annotation-config />

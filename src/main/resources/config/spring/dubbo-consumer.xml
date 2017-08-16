@@ -10,5 +10,6 @@
 
     <dubbo:consumer retries="0" timeout="${dubbo.timeout}"/>
 
-    <dubbo:reference id="queryFacade" interface="com.hadly.project.dubbo.IQueryFacade" check="true"/>
+    <!-- NOTE:check设置为true时，会提示找不到provider，可能是未暴露完成的情况下就Refer了，后续跟一下 -->
+    <dubbo:reference id="queryFacade" interface="com.hadly.project.dubbo.IQueryFacade" check="false"/>
 </beans>

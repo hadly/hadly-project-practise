@@ -16,6 +16,7 @@
                 <value>classpath:config/dubbo.properties</value>
             </list>
         </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
     </bean>
 
     <dubbo:application name="${dubbo.application.provider}"/>

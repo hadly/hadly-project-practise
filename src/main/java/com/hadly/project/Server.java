@@ -28,6 +28,12 @@ public class Server {
     }
 
     private static void invokeProvider(QueryFacadeClient queryFacadeClient) {
+        try {
+            System.out.println("sleep several seconds before consumer invoke provider.");
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         queryFacadeClient.query();
     }
 }
