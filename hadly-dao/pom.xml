@@ -55,6 +55,8 @@
             <artifactId>mybatis-ehcache</artifactId>
             <version>${mybatis-ecache.version}</version>
         </dependency>
+        <!-- h2 DB -->
+        <!--TODO-->
     </dependencies>
 
 </project>

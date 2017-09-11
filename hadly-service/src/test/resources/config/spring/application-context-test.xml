@@ -10,8 +10,7 @@
             http://www.springframework.org/schema/aop
             http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
     <!-- 包导入 -->
-    <import resource="classpath:/config/dubbo/dubbo-provider.xml" />
-    <import resource="classpath:/config/dubbo/dubbo-consumer.xml" />
+    <import resource="classpath:/config/spring/dao-test.xml" />
 
     <!-- 包扫描 -->
     <context:component-scan base-package="com.hadly.project" />
