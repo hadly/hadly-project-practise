@@ -16,16 +16,16 @@
                 <value>classpath:config/dubbo.properties</value>
             </list>
         </property>
-        <property name="ignoreUnresolvablePlaceholders" value="true" />
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
     </bean>
 
     <dubbo:application name="${dubbo.application.provider}"/>
-    <!--NOTE:如果consumer没有配置registry，那么会和provider公用这个registry-->
+    <!-- NOTE:如果consumer没有配置registry，那么会和provider公用这个registry -->
     <dubbo:registry id="registry" protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}"/>
     <dubbo:protocol name="dubbo" port="${dubbo.protocol.port}"/>
     <dubbo:provider delay="-1" retries="0" timeout="${dubbo.timeout}"/>
 
-    <!--也可以在实现类上面添加@Service，在这里直接添加queryFacadeImpl即可，不用添加下面一行的bean定义-->
-    <dubbo:service interface="com.hadly.project.dubbo.IQueryFacade" ref="queryFacadeImpl" group="group1" />
-    <bean id="queryFacadeImpl" class="com.hadly.project.dubbo.provider.QueryFacadeImpl" />
+    <!-- 也可以在实现类上面添加@Service，在这里直接添加queryFacadeImpl即可，不用添加下面一行的bean定义 -->
+    <dubbo:service interface="com.hadly.project.dubbo.IQueryFacade" ref="queryFacadeImpl" group="group1"/>
+    <bean id="queryFacadeImpl" class="com.hadly.project.dubbo.provider.QueryFacadeImpl"/>
 </beans>
