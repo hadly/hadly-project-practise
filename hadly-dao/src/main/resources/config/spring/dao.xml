@@ -31,33 +31,33 @@
         <property name="password" value="${jdbc.password}"/>
         <property name="connectionProperties">
             <props>
-                <prop key="dbpool.class"></prop>
-                <prop key="dbpool.filters"></prop>
+                <prop key="dbpool.class">${dbpool.class}</prop>
+                <prop key="dbpool.filters">${dbpool.filters}</prop>
                 <!-- 初始化连接数量 -->
-                <prop key="dbpool.initialSize"></prop>
+                <prop key="dbpool.initialSize">${dbpool.initialSize}</prop>
                 <!-- 最小空闲连接数 -->
-                <prop key="dbpool.minIdle"></prop>
+                <prop key="dbpool.minIdle">${dbpool.minIdle}</prop>
                 <!-- 最大并发连接数 -->
-                <prop key="dbpool.maxActive"></prop>
+                <prop key="dbpool.maxActive">${dbpool.maxActive}</prop>
                 <!-- 配置获取连接等待超时的时间 -->
-                <prop key="dbpool.maxWait"></prop>
+                <prop key="dbpool.maxWait">${dbpool.maxWait}</prop>
                 <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
-                <prop key="dbpool.timeBetweenEvictionRunsMillis"></prop>
+                <prop key="dbpool.timeBetweenEvictionRunsMillis">${dbpool.timeBetweenEvictionRunsMillis}</prop>
                 <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
-                <prop key="dbpool.minEvictableIdleTimeMillis"></prop>
-                <prop key="dbpool.validationQuery"></prop>
-                <prop key="dbpool.testWhileIdle"></prop>
-                <prop key="dbpool.testOnBorrow"></prop>
-                <prop key="dbpool.testOnReturn"></prop>
-                <prop key="dbpool.maxOpenPreparedStatements"></prop>
-                <prop key="dbpool.poolPreparedStatements"></prop>
-                <prop key="dbpool.maxPoolPreparedStatementPerConnectionSize"></prop>
+                <prop key="dbpool.minEvictableIdleTimeMillis">${dbpool.minEvictableIdleTimeMillis}</prop>
+                <prop key="dbpool.validationQuery">${dbpool.validationQuery}</prop>
+                <prop key="dbpool.testWhileIdle">${dbpool.testWhileIdle}</prop>
+                <prop key="dbpool.testOnBorrow">${dbpool.testOnBorrow}</prop>
+                <prop key="dbpool.testOnReturn">${dbpool.testOnReturn}</prop>
+                <prop key="dbpool.maxOpenPreparedStatements">${dbpool.maxOpenPreparedStatements}</prop>
+                <prop key="dbpool.poolPreparedStatements">${dbpool.poolPreparedStatements}</prop>
+                <prop key="dbpool.maxPoolPreparedStatementPerConnectionSize">${dbpool.maxPoolPreparedStatementPerConnectionSize}</prop>
                 <!-- 打开 removeAbandoned 功能 -->
-                <prop key="dbpool.removeAbandoned"></prop>
+                <prop key="dbpool.removeAbandoned">${dbpool.removeAbandoned}</prop>
                 <!-- 1800 秒，也就是 30 分钟 -->
-                <prop key="dbpool.removeAbandonedTimeout"></prop>
+                <prop key="dbpool.removeAbandonedTimeout">${dbpool.removeAbandonedTimeout}</prop>
                 <!-- 关闭 abanded 连接时输出错误日志 -->
-                <prop key="dbpool.logAbandoned"></prop>
+                <prop key="dbpool.logAbandoned">${dbpool.logAbandoned}</prop>
             </props>
         </property>
     </bean>

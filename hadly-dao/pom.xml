@@ -25,24 +25,28 @@
             <artifactId>hadly-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
         <!-- mysql连接驱动 -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql-connection.version}</version>
         </dependency>
+
         <!-- 阿里连接池 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>${druid.version}</version>
         </dependency>
+
         <!-- MyBatis Spring -->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
             <version>${mybatis-spring}</version>
         </dependency>
+
         <!-- MyBatis -->
         <dependency>
             <groupId>org.mybatis</groupId>
@@ -55,6 +59,19 @@
             <artifactId>mybatis-ehcache</artifactId>
             <version>${mybatis-ecache.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>4.2.5.RELEASE</version>
+        </dependency>
+
         <!-- h2 DB -->
         <!--TODO-->
     </dependencies>
