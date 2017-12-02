@@ -1,5 +1,6 @@
 package com.hadly.project;
 
+import com.hadly.project.aop.AopTestBean;
 import com.hadly.project.dubbo.consumer.QueryFacadeClient;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -10,21 +11,32 @@ import java.util.concurrent.CountDownLatch;
  */
 public class Server {
     private static final String CONFIG_LOCATION = "config/spring/application-context.xml";
+    private static ClassPathXmlApplicationContext applicationContext;
 
     public static void main(String[] args) {
         try {
             CountDownLatch latch = new CountDownLatch(1);
 
-            ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
+            applicationContext = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
             applicationContext.start();
 
-            invokeProvider((QueryFacadeClient) applicationContext.getBean("queryFacadeClient"));
+            //startDubboService();
+            testAop();
 
             latch.await();
         } catch (InterruptedException e) {
             e.printStackTrace();
             System.exit(1);
         }
+    }
+
+    private static void testAop() {
+        AopTestBean bean = applicationContext.getBean(AopTestBean.class);
+        bean.test();
+    }
+
+    private static void startDubboService() {
+        invokeProvider((QueryFacadeClient) applicationContext.getBean(QueryFacadeClient.class));
     }
 
     private static void invokeProvider(QueryFacadeClient queryFacadeClient) {
