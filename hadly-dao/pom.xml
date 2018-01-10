@@ -14,8 +14,10 @@
         <druid.version>1.0.29</druid.version>
         <mysql-connection.version>5.1.26</mysql-connection.version>
         <mybatis-spring>1.2.3</mybatis-spring>
-        <spring.version>4.3.8</spring.version>
+        <spring.version>4.3.10.RELEASE</spring.version>
         <mybatis.version>3.3.0</mybatis.version>
+        <h2.version>1.4.190</h2.version>
+        <junit.version>4.12</junit.version>
         <mybatis-ecache.version>1.0.2</mybatis-ecache.version>
     </properties>
 
@@ -64,7 +66,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -74,13 +76,18 @@
             <version>${spring.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aspect</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-aspect</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
 
         <!-- h2 DB -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
+        </dependency>
         <!--TODO-->
     </dependencies>
 
